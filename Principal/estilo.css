@@ -1,0 +1,75 @@
+body{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+  }
+  
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  
+    display: flex;
+    align-items: center;
+  
+    padding: 18px 40px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(6px);
+  
+    box-sizing: border-box;
+    z-index: 999;
+  
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    transition: padding 0.25s ease;
+  }
+  .nombre{
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  .Titulo{
+    margin-left: auto;
+    margin-right: 22px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #666;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+  
+  .Contacto{
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #666;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+  
+  .Titulo:hover,
+  .Contacto:hover{
+    color: #111;
+  }
+
+  header.scrolled{
+    padding: 12px 40px;
+  }
+  
+  header.scrolled .Titulo,
+  header.scrolled .Contacto{
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  main, .contenido, section{
+
+  }
+  body{
+    padding-top: 70px; /* ajusta si tu header es más alto */
+  }
+
+  
