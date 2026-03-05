@@ -1,6 +1,8 @@
-<script>
-  window.addEventListener("scroll", () => {
-    const header = document.getElementById("header");
-    header.classList.toggle("scrolled", window.scrollY > 60);
+
+  lottie.loadAnimation({
+    container: document.getElementById("robotLottie"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "Multimedia/robot.json"  // <-- asegúrate que el archivo exista ahí
   });
-</script>

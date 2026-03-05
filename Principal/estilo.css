@@ -1,36 +1,38 @@
-body{
+body {
     font-family: 'Inter', sans-serif;
     margin: 0;
-  }
-  
-  header{
+    background-color: white;
+    padding-top: 70px;
+}
+
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-  
+
     display: flex;
     align-items: center;
-  
+
     padding: 18px 40px;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(6px);
-  
+
     box-sizing: border-box;
     z-index: 999;
-  
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     transition: padding 0.25s ease;
-  }
-  .nombre{
+}
+
+.nombre {
     font-size: 18px;
     font-weight: 500;
-    color: #111;
+    color: #555555;
     text-decoration: none;
-    white-space: nowrap;
-  }
-  
-  .Titulo{
+}
+
+.Titulo {
     margin-left: auto;
     margin-right: 22px;
     font-size: 12px;
@@ -39,37 +41,196 @@ body{
     color: #666;
     text-decoration: none;
     transition: opacity 0.2s ease;
-  }
-  
-  .Contacto{
+}
+
+.Contacto {
     font-size: 12px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #666;
     text-decoration: none;
     transition: opacity 0.2s ease;
-  }
-  
-  .Titulo:hover,
-  .Contacto:hover{
-    color: #111;
-  }
+}
 
-  header.scrolled{
-    padding: 12px 40px;
-  }
-  
-  header.scrolled .Titulo,
-  header.scrolled .Contacto{
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  main, .contenido, section{
+/*---------------------------------------------------------*/
 
-  }
-  body{
-    padding-top: 70px; /* ajusta si tu header es más alto */
-  }
 
+
+.VistaPrincipal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;
+}
+
+.menu {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.robot-lottie {
+    width: 420px;
+    height: 420px;
+}
+
+/*---------------------------------------------------------*/
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    width: 200px;
+}
+
+.menu .btn:nth-child(odd) {
+    background: white;
+    color: #6f63ff;
+    border: 2px solid #6f63ff;
+}
+
+.menu .btn:nth-child(even) {
+    background: #6f63ff;
+    color: white;
+    border: 2px solid #6f63ff;
+}
+
+/*---------------------------------------------------------*/
+
+.palabras-bienvenida {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 0px;
+    width: 520px;
+    max-width: 100%;
+}
+
+.letra1 {
+    font-size: 70px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.palabras-bienvenida .letra1:nth-child(2) {
+    font-size: 17px;
+    font-weight: 100;
+}
+
+#texto-grande {
+    color: #6f63ff;
+}
+
+/*---------------------------------------------------------*/
+
+.btn-descargar {
+    background: white;
+    color: #6f63ff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.12s ease, opacity 0.12s ease, box-shadow 0.12s ease;
+    box-shadow: 0 10px 22px rgba(111, 99, 255, 0.35);
+}
+
+.btn-descargar:hover {
+    transform: translateY(-2px);
+}
+
+.btn-descargar:focus-visible {
+    outline: 3px solid rgba(111, 99, 255, 0.35);
+    outline-offset: 3px;
+}
+/*-------------------------------------------------------------*/
+
+.tarjeta{
+    background: rgba(255,255,255,0.85);
+    border-radius: 16px;
+    padding: 16px 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border: 4px solid rgba(190, 190, 190, 0.06);
+    backdrop-filter: blur(8px);
+    color:  rgb(86, 86, 86);
+  }
   
+
+  .tarjeta-encabezado{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  
+  .icono-cuadro{
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    background: #6f63ff;
+  }
+  
+  .tarjeta-titulo{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(255, 193, 70);
+  }
+  
+
+  .tarjeta-contenido{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  
+  .lista-aprendizajes{
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .lista-aprendizajes li{
+    position: relative;
+    padding-left: 15px;
+  }
+  
+  .lista-aprendizajes li::before{
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #6f63ff;
+    font-weight: 900;
+  }
+  
+
+  .imagen-lado{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }

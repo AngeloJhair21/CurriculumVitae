@@ -6,32 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Angelo Jhair Llagas Millones</title>
   <link rel="stylesheet" href="Principal/estilo.css">
-  <link rel="stylesheet" href="Principal/JavaScript.js">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" defer></script>
+  <script src="Principal/JavaScript.js" defer></script>
 </head>
 
 <body>
   <header>
-  <a class="nombre">Angelo Jhair Llagas Millones</a>
-  <a class="Titulo">Curriculum vitae</a>
-  <a class="Contacto" href="https://wa.me/51941577759?text=Hola%2C%20he%20visto%20tu%20cv%20y%20me%20estoy%20interesado%20en%20ti">Contactame</a>
+    <a class="nombre">Angelo Jhair Llagas Millones</a>
+    <a class="Titulo">Curriculum vitae</a>
+    <a class="Contacto"
+      href="https://wa.me/51941577759?text=Hola%2C%20he%20visto%20tu%20cv%20y%20me%20estoy%20interesado%20en%20ti">Contactame</a>
   </header>
 
-  <main>
-    <model-viewer 
-    src="Principal/robot_playground/scene.gltf"
-    ></model-viewer>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#acerca">Acerca de mí</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#educacion">Educación</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#certificaciones">Certificaciones</a>
-      <a href="#contacto">Contacto</a>
-     </nav>
+  <main class="VistaPrincipal">
+    <nav class="menu">
+      <a class="btn" href="#acerca">Acerca de mí</a>
+      <a class="btn" href="#proyectos">Proyectos</a>
+      <a class="btn" href="#habilidades">Habilidades</a>
+      <a class="btn" href="#educacion">Educación</a>
+      <a class="btn" href="#experiencia">Experiencia</a>
+      <a class="btn" href="#certificaciones">Certificaciones</a>
+      <a class="btn" href="#contacto">Contacto</a>
+    </nav>
+    <div class="palabras-bienvenida">
+      <a class="letra1" id="texto-grande">¡Hola!, soy Angelo Jhair Llagas Millones</a>
+      <a class="letra1">Estudiante de Ingeneria de Sistemas e informatica</a>
+      <button class="btn-descargar" onclick="window.location.href='Archivos/Curriculum-vitae.pdf'">
+        Descargar CV
+      </button>
+      <div class="tarjeta tarjeta-aprendizajes">
+        <div class="tarjeta-encabezado">
+          <span class="icono-cuadro"></span>
+          <h3 class="tarjeta-titulo">Próximos aprendizajes</h3>
+        </div>
+      
+        <div class="tarjeta-contenido">
+          <ul class="lista-aprendizajes">
+            <li>Arduino y microcontroladores</li>
+            <li>Arquitectura de datos en la nube</li>
+            <li>Herramiento Flyway</li>
+          </ul>
+      
+          <img class="imagen-lado" src="Multimedia/Imagen-actualizacion3.png" alt="Aprendizaje">
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="media">
+      <div id="robotLottie" class="robot-lottie"></div>
+    </div>
   </main>
 
 </body>
