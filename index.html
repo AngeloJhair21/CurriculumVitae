@@ -19,46 +19,164 @@
       href="https://wa.me/51941577759?text=Hola%2C%20he%20visto%20tu%20cv%20y%20me%20estoy%20interesado%20en%20ti">Contactame</a>
   </header>
 
-  <main class="VistaPrincipal">
-    <nav class="menu">
-      <a class="btn" href="#acerca">Acerca de mí</a>
-      <a class="btn" href="#proyectos">Proyectos</a>
-      <a class="btn" href="#habilidades">Habilidades</a>
-      <a class="btn" href="#educacion">Educación</a>
-      <a class="btn" href="#experiencia">Experiencia</a>
-      <a class="btn" href="#certificaciones">Certificaciones</a>
-      <a class="btn" href="#contacto">Contacto</a>
+  <main class="vista-principal">
+    <nav class="vista-principal__menu">
+      <a class="vista-principal__boton-menu" href="#acerca">Acerca de mí</a>
+      <a class="vista-principal__boton-menu" href="#proyectos">Proyectos</a>
+      <a class="vista-principal__boton-menu" href="#habilidades">Habilidades</a>
+      <a class="vista-principal__boton-menu" href="#educacion">Educación</a>
+      <a class="vista-principal__boton-menu" href="#experiencia">Experiencia</a>
+      <a class="vista-principal__boton-menu" href="#certificaciones">Certificaciones</a>
+      <a class="vista-principal__boton-menu" href="#contacto">Contacto</a>
     </nav>
-    <div class="palabras-bienvenida">
-      <a class="letra1" id="texto-grande">¡Hola!, soy Angelo Jhair Llagas Millones</a>
-      <a class="letra1">Estudiante de Ingeneria de Sistemas e informatica</a>
-      <button class="btn-descargar" onclick="window.location.href='Archivos/Curriculum-vitae.pdf'">
-        Descargar CV
-      </button>
-      <div class="tarjeta tarjeta-aprendizajes">
-        <div class="tarjeta-encabezado">
-          <span class="icono-cuadro"></span>
-          <h3 class="tarjeta-titulo">Próximos aprendizajes</h3>
+  
+    <section class="vista-principal__contenido">
+      <div class="vista-principal__presentacion">
+        <h1 class="vista-principal__titulo">¡Hola!, soy Angelo Jhair Llagas Millones</h1>
+        <p class="vista-principal__subtitulo">Estudiante de Ingeniería de Sistemas e Informática</p>
+  
+        <button class="vista-principal__boton-cv" onclick="window.location.href='Archivos/Curriculum-vitae.pdf'">
+          Descargar CV
+        </button>
+      </div>
+  
+      <article class="vista-principal__tarjeta vista-principal__tarjeta--aprendizajes">
+        <div class="vista-principal__encabezado-tarjeta">
+          <span class="vista-principal__icono-tarjeta"></span>
+          <h2 class="vista-principal__titulo-tarjeta">Próximos aprendizajes</h2>
         </div>
-      
-        <div class="tarjeta-contenido">
-          <ul class="lista-aprendizajes">
+  
+        <div class="vista-principal__aprendizajes">
+          <ul class="vista-principal__lista-aprendizajes">
             <li>Arduino y microcontroladores</li>
             <li>Arquitectura de datos en la nube</li>
-            <li>Herramiento Flyway</li>
+            <li>Herramienta Flyway</li>
           </ul>
-      
-          <img class="imagen-lado" src="Multimedia/Imagen-actualizacion3.png" alt="Aprendizaje">
+  
+          <img class="vista-principal__imagen-aprendizajes" src="Multimedia/Imagen-actualizacion3.png" alt="Aprendizaje">
         </div>
-      </div>
-    </div>
-    
-
-    <div class="media">
-      <div id="robotLottie" class="robot-lottie"></div>
-    </div>
+      </article>
+  
+      <article class="vista-principal__tarjeta vista-principal__tarjeta--caso">
+        <div class="vista-principal__encabezado-tarjeta">
+          <span class="vista-principal__icono-tarjeta"></span>
+          <h2 class="vista-principal__titulo-tarjeta">¿Qué harías frente a este problema?</h2>
+        </div>
+  
+        <div class="vista-principal__caso">
+          <p class="vista-principal__texto-caso">
+            Una empresa presenta incidentes de seguridad, reportes desordenados y poca visibilidad
+            de lo que ocurre en tiempo real dentro de sus operaciones.
+          </p>
+  
+          <div class="vista-principal__acciones-caso">
+            <button class="vista-principal__boton-rama" data-rama="InteligenciaArtificial">Inteligencia Artificial</button>
+            <button class="vista-principal__boton-rama" data-rama="Software">Desarrollo Software</button>
+            <button class="vista-principal__boton-rama" data-rama="Basededato">Base de datos</button>
+            <button class="vista-principal__boton-rama" data-rama="Redes">IoT</button>
+          </div>
+        </div>
+      </article>
+    </section>
+  
+    <aside class="vista-principal__multimedia">
+      <div id="robot-principal" class="vista-principal__robot"></div>
+    </aside>
   </main>
 
+  <div class="modal-rama" id="modal-rama">
+    <div class="modal-rama__contenido">
+      <button class="modal-rama__cerrar" id="cerrar-modal-rama" aria-label="Cerrar modal">&times;</button>
+  
+      <h3 class="modal-rama__titulo" id="modal-rama-titulo">Título</h3>
+  
+      <div class="modal-rama__bloque">
+        <h4>Solución</h4>
+        <p id="modal-rama-solucion"></p>
+      </div>
+  
+      <div class="modal-rama__bloque">
+        <h4>Pros</h4>
+        <ul id="modal-rama-pros"></ul>
+      </div>
+  
+      <div class="modal-rama__bloque">
+        <h4>Contras</h4>
+        <ul id="modal-rama-contras"></ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="seccion-acerca" id="acerca">
+    <div class="seccion-acerca__cabecera">
+      <div class="seccion-acerca__cabecera-contenido">
+        <h2 class="seccion-acerca__titulo">Acerca de mí</h2>
+      </div>
+    </div>
+  
+    <div class="seccion-acerca__contenido">
+      <div class="seccion-acerca__columna-principal">
+        <div class="seccion-acerca__perfil">
+          <div class="seccion-acerca__foto">
+            Tu foto aquí
+          </div>
+  
+          <div class="seccion-acerca__perfil-info">
+            <h3 class="seccion-acerca__nombre">Angelo Jhair Llagas Millones</h3>
+            <p class="seccion-acerca__texto">
+              Estudiante de Ingeniería de Sistemas e Informática. Me enfoco en aprender, construir y mejorar soluciones
+              tecnológicas con orden y constancia.
+            </p>
+          </div>
+        </div>
+  
+        <article class="seccion-acerca__tarjeta">
+          <div class="seccion-acerca__tarjeta-encabezado">
+            <span class="seccion-acerca__icono"></span>
+            <h4 class="seccion-acerca__tarjeta-titulo">Aptitudes</h4>
+          </div>
+  
+          <div class="seccion-acerca__lista-aptitudes">
+            <button class="seccion-acerca__aptitud" data-aptitud="deteccion-fallas" type="button"><span class="seccion-acerca__punto"></span>Detección de fallas y varias opciones de solución</button>
+            <button class="seccion-acerca__aptitud" data-aptitud="pensamiento-logico" type="button"><span class="seccion-acerca__punto"></span>Pensamiento lógico</button>
+            <button class="seccion-acerca__aptitud" data-aptitud="optimizacion" type="button"><span class="seccion-acerca__punto"></span>Optimización</button>
+            <button class="seccion-acerca__aptitud" data-aptitud="persistente" type="button"><span class="seccion-acerca__punto"></span>Persistente</button>
+            <button class="seccion-acerca__aptitud" data-aptitud="autonomo" type="button"><span class="seccion-acerca__punto"></span>Autónomo</button>
+            <button class="seccion-acerca__aptitud" data-aptitud="observacion-mejora" type="button"><span class="seccion-acerca__punto"></span>Observación y mejora</button>
+            <button class="seccion-acerca__aptitud" data-aptitud="planificacion" type="button"><span class="seccion-acerca__punto"></span>Planificación</button>
+            <button class="seccion-acerca__aptitud" data-aptitud="disciplinado" type="button"><span class="seccion-acerca__punto"></span>Disciplinado</button>
+            <button class="seccion-acerca__aptitud" data-aptitud="adaptabilidad" type="button"><span class="seccion-acerca__punto"></span>Adaptabilidad</button>
+            <button class="seccion-acerca__aptitud" data-aptitud="responsabilidad" type="button"><span class="seccion-acerca__punto"></span>Responsabilidad</button>
+            <button class="seccion-acerca__aptitud" data-aptitud="calidad" type="button"><span class="seccion-acerca__punto"></span>Resultado de calidad</button>
+            <button class="seccion-acerca__aptitud" data-aptitud="gestion-procesos" type="button"><span class="seccion-acerca__punto"></span>Gestión de procesos</button>
+          </div>
+  
+          <div class="seccion-acerca__ayuda">Tip: Puedes hacer clic en cada cuadro para mostrar la descripción de la aptitud.</div>
+        </article>
+      </div>
+  
+      <aside class="seccion-acerca__lado-derecho">
+        <img class="seccion-acerca__ilustracion" src="Multimedia/Acerca-de-mi-imagen.png" alt="Ilustración chico con laptop">
+      </aside>
+    </div>
+  </section>
+  <div class="modal-aptitud" id="modal-aptitud">
+    <div class="modal-aptitud__contenido">
+      <button class="modal-aptitud__cerrar" id="cerrar-modal-aptitud" aria-label="Cerrar modal">&times;</button>
+  
+      <h3 class="modal-aptitud__titulo" id="modal-aptitud-titulo">Título</h3>
+  
+      <div class="modal-aptitud__bloque">
+        <h4>Descripción</h4>
+        <p id="modal-aptitud-descripcion"></p>
+      </div>
+  
+      <div class="modal-aptitud__bloque">
+        <h4>Cómo aporta</h4>
+        <ul id="modal-aptitud-aporte"></ul>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
